@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ app_name }}</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header><div class="brand">LogiEnglish <span>AI</span></div><p>English + IELTS + Logistics — bitta platformada</p></header>
+<main>
+<section class="hero"><h1>Kelajagingizni AI bilan rivojlantiring</h1><p>Ingliz tili, IELTS va logistika bo‘yicha o‘rganish platformasi.</p></section>
+<section class="cards">
+<article><h2>English AI</h2><p>Vocabulary, grammatika, Speaking va AI suhbat.</p></article>
+<article><h2>IELTS AI</h2><p>A0 darajadan boshlab IELTS tayyorgarligi.</p></article>
+<article><h2>Logistics AI</h2><p>Dispatcher, Broker, Tracking va Safety asoslari.</p></article>
+</section>
+<section class="panel"><h2>Tariflar</h2>
+<div class="prices">
+<div><b>Logistika — 1 oy</b><strong>49 990 so‘m</strong></div>
+<div><b>Kunlik limitni oshirish</b><strong>14 990 so‘m</strong></div>
+<div><b>IELTS — 1 oy</b><strong>59 000 so‘m</strong></div>
+<div><b>IELTS — 3 oy</b><strong>219 000 so‘m</strong></div>
+</div></section>
+<section class="panel"><h2>To‘lov chekini yuborish</h2>
+<p class="muted">Hozircha chek admin tomonidan qo‘lda tekshiriladi. Click/Payme avtomatik API ulanishi sozlanmagan.</p>
+<form action="/payments/submit" method="post" enctype="multipart/form-data">
+<label>Telegram ID<input name="telegram_id" inputmode="numeric" required placeholder="Masalan: 123456789"></label>
+<label>Ism<input name="full_name" placeholder="Ismingiz"></label>
+<label>Tarif<select name="plan" required>
+<option value="logistics_month">Logistika — 49 990 so‘m / oy</option>
+<option value="limit_addon">Kunlik limitni oshirish — 14 990 so‘m</option>
+<option value="ielts_month">IELTS — 59 000 so‘m / oy</option>
+<option value="ielts_3months">IELTS — 219 000 so‘m / 3 oy</option>
+</select></label>
+<label>To‘lov cheki<input type="file" name="receipt" accept="image/*,application/pdf" required></label>
+<button type="submit">Chekni yuborish</button>
+</form>
+</section>
+</main><footer>© LogiEnglish AI</footer>
+</body></html>
